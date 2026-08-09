@@ -8,3 +8,8 @@ class UserRequest(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class UserResponse(BaseModel):
+    name : str
+    email : str
