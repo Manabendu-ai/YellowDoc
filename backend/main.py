@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from .router.excel_router import router as exr
 from .router.query_router import router as qrr
+from .router.user_router import router as usr
 
 app = FastAPI(
     title="LedgerMind.ai",
@@ -13,6 +14,7 @@ app = FastAPI(
 
 app.include_router(exr)
 app.include_router(qrr)
+app.include_router(usr)
 
 @app.get("/")
 def home():
