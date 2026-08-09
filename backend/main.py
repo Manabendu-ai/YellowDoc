@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from .router.excel_router import router as exr
 from .router.query_router import router as qrr
 from .router.user_router import router as usr
+from .db.database import Base, engine
 
 app = FastAPI(
     title="LedgerMind.ai",
@@ -11,6 +12,10 @@ app = FastAPI(
     and financial records into structured intelligence.
     """
 )
+
+
+Base.metadata.create_all(bind=engine)
+
 
 app.include_router(exr)
 app.include_router(qrr)
