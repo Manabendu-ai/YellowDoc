@@ -15,7 +15,7 @@ class ModelEngine:
 
     def __init__(self):
         self.model = ChatGroq(
-            model = "llama-3.3-70b-versatile"
+            model = "openai/gpt-oss-120b"
         )
 
         self.agent = create_agent(
