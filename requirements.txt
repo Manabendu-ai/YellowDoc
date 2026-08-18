@@ -22,3 +22,9 @@ uvicorn
 pydantic
 python-dotenv
 python-multipart
+pymysql
+passlib
+
+# auth
+python-jose[cryptography]
+
