@@ -12,7 +12,7 @@ router = APIRouter(
 
 
 @router.post("/generate")
-async def excel_generator(file : UploadFile, excel_filename: str, get_current:UserRequest = Depends(get_current_user)):
+async def excel_generator(file : UploadFile, excel_filename: str):
 
     file_path = await FileService().save(file)
     excel_file_path = await ExcelService(file_path, excel_filename).convert()

@@ -10,6 +10,6 @@ router = APIRouter(
 )
 
 @router.post("")
-async def rag_search(query: str, get_current:UserRequest = Depends(get_current_user)):
+async def rag_search(query: str):
     response = RagService(query).get_response()
     return response
