@@ -1,0 +1,30 @@
+# Document processing
+docling
+openpyxl
+
+# LLM / LangChain
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langchain-groq
+groq
+
+# RAG / Embeddings
+sentence-transformers
+faiss-cpu
+
+# Backend
+fastapi
+uvicorn
+
+# Data / utilities
+pydantic
+python-dotenv
+python-multipart
+pymysql
+passlib
+
+# auth
+python-jose[cryptography]
+
