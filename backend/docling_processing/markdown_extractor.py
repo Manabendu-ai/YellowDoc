@@ -12,26 +12,25 @@ class MDExtractor:
         self.converter = DocumentConverter()
 
     def extract(self, file_path:str)->str:
-        try:
-            self.file_path = file_path
-            doc = self.converter.convert(file_path)
-            self.content = doc.document.export_to_markdown()
-            return self.content
-        except Exception as e:
-            print(f"Exception at Extracting: {e}")
+        self.file_path = file_path
+        doc = self.converter.convert(file_path)
+        self.content = doc.document.export_to_markdown()
+
+        if not self.content or not self.content.strip():
+            raise ValueError(
+                "No readable text could be extracted from this document. "
+                "It may be blank, corrupted, or an unsupported scan."
+            )
+        return self.content
 
     def save(self, persist_dir:str = "docs/")->str:
-        try:
-            os.makedirs(persist_dir, exist_ok=True)
-    
-            file_name = self.file_path.split(".")[0].split("/")[1]
-            md_path = os.path.join(persist_dir, f"{file_name}.md")
-    
-            with open(md_path, "w", encoding="utf-8") as f:
-                f.write(self.content)
-    
-            print(f"[SUCCESS] File Saved at : {md_path}")
-            return md_path
-        except Exception as e:
-            print(f"Exception at Saving : {e}")
-        
+        os.makedirs(persist_dir, exist_ok=True)
+
+        base_name = os.path.splitext(os.path.basename(self.file_path))[0]
+        md_path = os.path.join(persist_dir, f"{base_name}.md")
+
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(self.content)
+
+        print(f"[SUCCESS] File Saved at : {md_path}")
+        return md_path
