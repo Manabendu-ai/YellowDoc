@@ -1,7 +1,9 @@
 from langchain_groq import ChatGroq
 from langchain.messages import SystemMessage
 from langchain.agents import create_agent
+from groq import BadRequestError
 import os
+import time
 from .json_response import JsonFormatResponse
 from .system_message import message
 from dotenv import load_dotenv
@@ -28,18 +30,45 @@ class ModelEngine:
         print("[INFO] LLM Model loaded Successfully!")
 
     def run(self, markdown : str)->JsonFormatResponse:
-        self.response =  self.agent.invoke(
-            {
-                "messages" : [
-                    {
-                        "role" : "user",
-                        "content" : markdown
-                    }
-                ]
-            }
-        )["structured_response"]
+        """Invoke the agent, retrying transient Groq JSON-validation failures.
 
-        return self.response
+        Groq structured output intermittently returns an empty generation
+        ('json_validate_failed' with empty failed_generation). A short retry
+        loop resolves it without failing the whole conversion.
+        """
+        max_attempts = 3
+        last_error = None
+
+        for attempt in range(1, max_attempts + 1):
+            try:
+                result = self.agent.invoke(
+                    {
+                        "messages" : [
+                            {
+                                "role" : "user",
+                                "content" : markdown
+                            }
+                        ]
+                    }
+                )
+                self.response = result.get("structured_response")
+                if self.response is None:
+                    raise ValueError("Model returned an empty structured response.")
+                return self.response
+
+            except (BadRequestError, ValueError, KeyError) as e:
+                last_error = e
+                message_text = str(e)
+                transient = (
+                    isinstance(e, (ValueError, KeyError))
+                    or "json_validate_failed" in message_text
+                )
+                if not transient or attempt == max_attempts:
+                    raise
+                print(f"[WARN] LLM attempt {attempt}/{max_attempts} failed, retrying: {message_text[:150]}")
+                time.sleep(2 * attempt)
+
+        raise RuntimeError(f"LLM failed after {max_attempts} attempts: {last_error}")
 
     def save(self, file_name, persist_dir:str = "docs/")->str:
         try:
@@ -53,7 +82,3 @@ class ModelEngine:
             return json_path
         except Exception as e:
             print(f"Exception at file saving: {e}")
-
-
-
-    
