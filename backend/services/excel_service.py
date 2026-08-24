@@ -17,6 +17,10 @@ class ExcelService:
         return self.md_path
 
     def json_converter(self)->str:
+        if not getattr(self, "markdown", None) or not self.markdown.strip():
+            raise ValueError(
+                "The document contains no readable text to structure."
+            )
         self.workbook_json = self.model.run(self.markdown)
         self.json_path = self.model.save(self.excel_filename, "json_files/")
         return self.json_path
@@ -35,7 +39,3 @@ class ExcelService:
         self.json_converter()
         self.excel_generator()
         return self.excel_path
-
-    
-
-    
