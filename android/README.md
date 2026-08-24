@@ -54,7 +54,7 @@ cd android
 
 ## Connecting to the backend
 
-The app ships with `http://10.0.2.2:8000/` as the default base URL — that's the Android-emulator alias for your machine's `localhost`.
+The app ships with `http://172.20.7.18:8000/` as the default base URL — that's the Android-emulator alias for your machine's `localhost`.
 
 - **Emulator:** just start your backend on port 8000 and launch the app.
 - **Physical device:** open the ⚙ settings sheet on the Home screen and enter your computer's LAN address, e.g. `http://192.168.1.20:8000`. Make sure the phone and computer share the same Wi-Fi network and that uvicorn listens on all interfaces:
