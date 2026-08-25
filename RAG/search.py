@@ -36,7 +36,7 @@ class RAGSearch:
 
 
         prompt = f"""
-You are LedgerMind.ai, an AI assistant that answers questions about financial documents.
+You are YellowDoc.ai, an AI assistant that answers questions about financial documents.
 
 Your task is to answer the user's question using ONLY the information provided in the retrieved context.
 
