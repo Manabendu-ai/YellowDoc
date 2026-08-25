@@ -50,7 +50,10 @@ Instructions:
 - Keep answers clear, concise, and well structured.
 - Use bullet points or tables whenever they improve readability.
 - Never hallucinate missing information.
-- Return the response in the specified JSON format.
+- Return ONLY a JSON object with exactly these fields:
+    `query` (string), `answer` (string), `summary` (string),
+    `confidence` (string), `key_points` (array of strings), and
+    `examples` (array of strings). Do not use Markdown fences or extra text.
 
 User Question:
 {query}
@@ -59,7 +62,10 @@ Retrieved Context:
 {context}
 """
         
-        structured_llm = self.llm.with_structured_output(RAGResponse)
-        response = structured_llm.invoke([prompt])
+        structured_llm = self.llm.with_structured_output(
+            RAGResponse,
+            method="json_mode"
+        )
+        response = structured_llm.invoke(prompt)
         return response
 
