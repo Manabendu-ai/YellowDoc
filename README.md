@@ -1,4 +1,13 @@
-# YellowDoc.ai
+<p style="text-align:center;" align="center"><picture>
+<img src="assests/ydc.png"
+alt="OldMonk Logo" width="20%" /></picture><br /><br /></p>
+<p align="center">
+<img src="https://skillicons.dev/icons?i=python,fastapi,kotlin,ai,gradle,github&perline=9" />
+</p>
+<p align="center">
+<h5><p align="center"><i>If you like YellowDOC.ai, please <a href="https://github.com/Manabendu-ai/YellowDoc.ai">★</a> this repository to show your support! 🤩</i></p></h5>
+<h1><p align="center">YellowDoc.ai</p></h1>
+<p align="center" >
 
 An Enterprise Intelligent Document Processing (IDP) and Financial Retrieval-Augmented Generation (RAG) Platform.
 
