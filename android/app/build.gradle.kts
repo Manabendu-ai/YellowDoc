@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ledgermind.app"
+    namespace = "com.yellowdoc.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ledgermind.app"
+        applicationId = "com.yellowdoc.app"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

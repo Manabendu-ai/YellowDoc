@@ -6,7 +6,7 @@ from .router.query_router import router as qrr
 from .db.database import Base, engine
 
 app = FastAPI(
-    title="LedgerMind.ai",
+    title="YellowDoc.ai",
     version="1.0.0",
     summary="""
     Enterprise AI platform that transform invoices, receipts, tax documents, 
@@ -27,7 +27,7 @@ app.include_router(qrr)
 def home():
     return {
         "API" : {
-            "application" : "LedgerMind.ai",
+            "application" : "YellowDoc.ai",
             "version" : "1.0.0"
         }
     }

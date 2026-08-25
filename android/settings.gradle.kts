@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LedgerMind"
+rootProject.name = "YellowDoc"
 include(":app")
