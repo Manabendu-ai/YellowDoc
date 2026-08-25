@@ -6,7 +6,7 @@
 -keepattributes *Annotation*
 
 # Keep data models parsed by Gson
--keep class com.ledgermind.app.data.model.** { *; }
+-keep class com.yellowdoc.app.data.model.** { *; }
 
 # Retrofit
 -keepclassmembers,allowshrinking,allowobfuscation interface * {

@@ -6,7 +6,7 @@ import os
 from urllib.parse import quote_plus
 
 DB_PASSWORD = quote_plus(os.getenv("DB_PASSWORD"))
-CONNECTION_URL = f"mysql+pymysql://riku:{DB_PASSWORD}@localhost:3306/ledgermind"
+CONNECTION_URL = f"mysql+pymysql://riku:{DB_PASSWORD}@localhost:3306/yellowdoc"
 
 engine = create_engine(
     CONNECTION_URL
