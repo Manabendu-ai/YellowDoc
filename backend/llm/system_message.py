@@ -29,6 +29,8 @@ GENERAL RULES
 - Preserve numbers as literal strings exactly as they appear in the source
   (see NUMBER RULES below) — do not compute, round, reformat, or "fix"
   values, even if they look inconsistent or mathematically wrong.
+- Every value in `columns` and `rows` must be a JSON string. Use `""` for
+  missing values; never emit numbers, booleans, or null values.
 - Ignore purely visual styling (bold, italics, font, color, horizontal
   rules) — it carries no semantic meaning.
 - Non-text elements (e.g. `<!-- image -->`, embedded image placeholders,
