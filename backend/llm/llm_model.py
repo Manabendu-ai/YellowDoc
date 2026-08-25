@@ -1,6 +1,7 @@
 from langchain_groq import ChatGroq
 from langchain.messages import SystemMessage
 from langchain.agents import create_agent
+from langchain.agents.structured_output import ToolStrategy
 from groq import BadRequestError
 import os
 import time
@@ -17,14 +18,15 @@ class ModelEngine:
 
     def __init__(self):
         self.model = ChatGroq(
-            model = "openai/gpt-oss-120b"
+            model = "openai/gpt-oss-120b",
+            temperature = 0
         )
 
         self.agent = create_agent(
             model=self.model,
             tools=[],
             system_prompt=message,
-            response_format=JsonFormatResponse
+            response_format=ToolStrategy(JsonFormatResponse)
         )
 
         print("[INFO] LLM Model loaded Successfully!")
