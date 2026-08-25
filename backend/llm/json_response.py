@@ -1,11 +1,19 @@
-from typing import Any
-from pydantic import BaseModel
+from typing import Annotated
+
+from pydantic import BaseModel, BeforeValidator
+
+
+def normalize_cell(value: object) -> str:
+    return "" if value is None else str(value)
+
+
+CellValue = Annotated[str, BeforeValidator(normalize_cell)]
 
 
 class Worksheet(BaseModel):
     worksheet_name: str
     columns: list[str]
-    rows: list[list[Any]]
+    rows: list[list[CellValue]]
 
 
 class Workbook(BaseModel):
