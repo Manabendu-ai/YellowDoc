@@ -2,12 +2,12 @@ import streamlit as st
 from excel_generator import ExcelGenerator
 from rag_service import QueryService
 st.set_page_config(
-    page_title = "LedgerMind.ai",
+    page_title = "YellowDoc.ai",
     layout="centered",
     initial_sidebar_state="auto"
 )
 
-st.title("LedgerMind.ai")
+st.title("YellowDoc.ai")
 
 st.markdown(
     """
