@@ -48,7 +48,7 @@ async def excel_generator(file : UploadFile, excel_filename: str):
 @router.get("/download/{filename}", tags=["PDF 2 EXCEL"])
 def download_excel(filename: str):
     """Serve a previously generated workbook so mobile clients can save it."""
-    safe_name = os.path.basename(filename)
+    safe_name = os.path.splitext(os.path.basename(filename))[0]
     file_path = os.path.join(EXCEL_DIR, f"{safe_name}.xlsx")
 
     if not os.path.exists(file_path):
