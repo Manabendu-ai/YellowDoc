@@ -13,6 +13,7 @@ groq
 # RAG / Embeddings
 sentence-transformers
 faiss-cpu
+fitz
 
 # Backend
 fastapi
