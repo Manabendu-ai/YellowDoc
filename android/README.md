@@ -1,6 +1,6 @@
-# LedgerMind.ai — Android App
+# YellowDoc.ai — Android App
 
-A native Android client for the LedgerMind.ai FastAPI backend, built with **Kotlin + Jetpack Compose (Material 3)**.
+A native Android client for the YellowDoc.ai FastAPI backend, built with **Kotlin + Jetpack Compose (Material 3)**.
 
 Premium dark fintech design: near-black surfaces, emerald accent, Space Grotesk display type and Manrope body type, hairline-bordered cards, animated progress states and chat bubbles.
 
@@ -17,14 +17,14 @@ Premium dark fintech design: near-black surfaces, emerald accent, Space Grotesk 
 
 ```
 android/
-├── app/src/main/java/com/ledgermind/app/
-│   ├── MainActivity.kt / LedgerMindApplication.kt
+├── app/src/main/java/com/yellowdoc/app/
+│   ├── MainActivity.kt / YellowDocApplication.kt
 │   ├── core/            AppConfig (DataStore), NetworkModule (Retrofit/OkHttp), AppContainer
 │   ├── data/
 │   │   ├── api/         Retrofit interface for /excel/generate, /query, /excel/download
 │   │   ├── model/       DTOs mirroring the backend responses
 │   │   ├── file/        MediaStore-based Excel downloader
-│   │   └── repo/        LedgerRepository (Result-wrapped calls)
+│   │   └── repo/        YellowRepository (Result-wrapped calls)
 │   └── ui/
 │       ├── theme/       Color, Type (variable fonts), Theme
 │       ├── components/  Cards, buttons, chips, top bar, typing indicator
@@ -37,7 +37,7 @@ android/
 
 - **Android Studio** (Koala or newer recommended)
 - JDK 17 (bundled with recent Android Studio versions)
-- The LedgerMind backend running (`uvicorn backend.main:app --reload` from the repo root)
+- The YellowDoc backend running (`uvicorn backend.main:app --reload` from the repo root)
 
 ## Build & run
 
