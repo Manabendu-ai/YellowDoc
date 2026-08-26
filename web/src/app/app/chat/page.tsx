@@ -127,6 +127,8 @@ export default function ChatPage() {
         ) : null}
       </header>
 
+      <DocumentPicker value={scope} onChange={setScope} disabled={pending} />
+
       <div className="flex flex-1 flex-col gap-4">
         {loaded && messages.length === 0 && !pending ? (
           <div className="flex flex-col gap-5">
