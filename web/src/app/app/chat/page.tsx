@@ -27,11 +27,18 @@ const tail = (messages: ChatMessage[]) =>
 
 export default function ChatPage() {
   const [messages, setMessages, loaded] = useStoredState<ChatMessage[]>("yellowdoc.thread", []);
+  /* Persisted alongside the thread: a scope you chose deliberately should not
+     quietly reset to "everything" on the next reload. */
+  const [scope, setScope] = useStoredState<string>("yellowdoc.scope", ALL_DOCUMENTS);
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abort = useRef<AbortController | null>(null);
+  /* Read inside `send` so changing the scope does not rebuild the callback and
+     re-render every message bubble. */
+  const scopeRef = useRef(scope);
+  scopeRef.current = scope;
 
   useEffect(() => () => abort.current?.abort(), []);
 
@@ -54,7 +61,7 @@ export default function ChatPage() {
       abort.current = controller;
 
       try {
-        const response = await askQuestion(query, controller.signal);
+        const response = await askQuestion(query, scopeRef.current, controller.signal);
         setMessages((current) =>
           tail([
             ...current,
@@ -68,6 +75,8 @@ export default function ChatPage() {
                 confidence: response.confidence ?? "",
                 key_points: response.key_points ?? [],
                 examples: response.examples ?? [],
+                scope: response.scope ?? null,
+                sources: response.sources ?? [],
               },
               at: Date.now(),
             },
