@@ -29,7 +29,7 @@ import faiss
 import numpy as np
 
 from . import embeddings as emb
-from .data_loader import DocumentLoader, list_documents, load_document
+from .data_loader import list_documents, load_document
 
 MANIFEST_VERSION = 2
 METRIC = "cosine"
