@@ -112,18 +112,58 @@ export default function SettingsPage() {
       <section className="card p-5 sm:p-6">
         <p className="label mb-1">Retrieval index</p>
         <p className="t-small text-fg-2">
-          The FAISS store is built once, from every Markdown file the extractor has written, the
-          first time a question is asked. It is then cached on disk, so documents converted
-          afterwards are not searchable until it is rebuilt.
+          Every converted document is embedded into the FAISS store as soon as its Markdown is
+          written, and the store keeps a manifest of what it holds. If that manifest stops matching{" "}
+          <span className="font-mono">md_files/</span> — a file changed, was removed, or was never
+          indexed — the next question resynchronises it automatically.
         </p>
+
         <div className="card-inset mt-4 p-4">
-          <p className="label mb-1">To rebuild it</p>
+          <p className="label mb-1">Rebuild from scratch</p>
           <p className="t-data text-fg-2">
-            Delete <span className="text-fg">faiss_store/</span> on the backend machine and ask a
-            question again. The next query re-reads <span className="text-fg">md_files/</span> and
-            re-embeds everything.
+            Discards the index and re-embeds every file in{" "}
+            <span className="text-fg">md_files/</span>. Rarely needed, since the index repairs
+            itself — reach for it if the store is corrupt or you changed the embedding model or
+            chunk size by hand. On a large corpus this takes a while.
           </p>
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              className="btn btn-outline btn-sm"
+              onClick={() => void rebuildIndex()}
+              disabled={rebuild.state === "running"}
+            >
+              {rebuild.state === "running" ? (
+                <>
+                  <span className="spinner" aria-hidden />
+                  Rebuilding
+                </>
+              ) : (
+                <>
+                  <RefreshIcon size={15} />
+                  Rebuild the index
+                </>
+              )}
+            </button>
+            {/* Mounted from the first render so the result is actually announced;
+                a live region inserted together with its text is skipped. */}
+            <p className="t-data text-fg-3" role="status">
+              {rebuild.state === "running"
+                ? "Re-embedding every document. Do not close this tab."
+                : rebuild.state === "done"
+                  ? `Rebuilt: ${rebuild.chunks} passages from ${rebuild.documents} ${
+                      rebuild.documents === 1 ? "document" : "documents"
+                    }.`
+                  : ""}
+            </p>
+          </div>
         </div>
+
+        {rebuild.state === "failed" ? (
+          <div className="mt-4">
+            <Notice title={rebuild.title} detail={rebuild.detail} />
+          </div>
+        ) : null}
       </section>
 
       <section className="card overflow-hidden">
