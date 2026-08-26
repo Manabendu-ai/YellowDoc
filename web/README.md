@@ -78,16 +78,16 @@ src/
     page.tsx              marketing page
     app/                  the application
       convert/            upload → pipeline progress → download
-      chat/               questions against the FAISS index
+      chat/               questions against the FAISS index, scoped per document
       history/            workbooks made from this browser
-      settings/           backend address, health check, theme
-    api/                  the four proxy route handlers
+      settings/           backend address, health check, theme, index rebuild
+    api/                  the six proxy route handlers
     globals.css           the entire design system
     not-found.tsx         404
   components/
     brand/ landing/ app/ ui/ theme/
   hooks/                  useReveal, useStoredState, useConversions
-  lib/                    api client, types, formatting, server config
+  lib/                    api client, types, formatting, scope, server config
 ```
 
 Each screen under `app/app/` has a two-line `layout.tsx` whose only job is to
