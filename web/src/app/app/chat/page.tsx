@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnswerDetail } from "@/components/app/AnswerDetail";
+import { ALL_DOCUMENTS, DocumentPicker } from "@/components/app/DocumentPicker";
 import { ChatIcon, SendIcon } from "@/components/ui/Icons";
 import { EmptyState } from "@/components/ui/Notice";
 import { useStoredState } from "@/hooks/useStoredState";
