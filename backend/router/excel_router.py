@@ -4,9 +4,6 @@ from fastapi import APIRouter, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from ..services.file_service import FileService
 from ..services.excel_service import ExcelService
-from ..auth.oauth2 import get_current_user
-from ..dto.user_dto import UserRequest
-from fastapi.params import Depends
 
 router = APIRouter(
     prefix="/excel",
