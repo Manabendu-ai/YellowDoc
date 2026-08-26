@@ -64,14 +64,39 @@ export async function checkHealth(): Promise<HealthPayload> {
   return unwrap<HealthPayload>(res);
 }
 
-export async function askQuestion(query: string, signal?: AbortSignal): Promise<RagResponse> {
+/**
+ * Ask a question.
+ *
+ * `source` is a filename from {@link listDocuments}. Passing it restricts
+ * retrieval to that one document; omitting it searches everything.
+ */
+export async function askQuestion(
+  query: string,
+  source?: string | null,
+  signal?: AbortSignal,
+): Promise<RagResponse> {
   const res = await fetch("/api/query", {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ query }),
+    /* `source: undefined` disappears in JSON.stringify, which is what we want —
+       the route handler treats absent and empty alike as "all documents". */
+    body: JSON.stringify({ query, source: source || undefined }),
     signal,
   });
   return unwrap<RagResponse>(res);
+}
+
+/** What the search index can currently see. Drives the document picker. */
+export async function listDocuments(signal?: AbortSignal): Promise<IndexedDocument[]> {
+  const res = await fetch("/api/documents", { cache: "no-store", signal });
+  const body = await unwrap<{ documents: IndexedDocument[]; count: number }>(res);
+  return body.documents ?? [];
+}
+
+/** Rebuild the index from md_files/. The manual escape hatch in Settings. */
+export async function reindex(signal?: AbortSignal): Promise<ReindexResult> {
+  const res = await fetch("/api/reindex", { method: "POST", signal });
+  return unwrap<ReindexResult>(res);
 }
 
 export async function convertDocument(
