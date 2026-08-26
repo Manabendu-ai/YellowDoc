@@ -1,18 +1,47 @@
 "use client";
 
+import { useCallback, useState } from "react";
 import { useHealth } from "@/components/app/HealthPill";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { RefreshIcon } from "@/components/ui/Icons";
 import { Notice } from "@/components/ui/Notice";
+import { RequestFailed, reindex } from "@/lib/api";
 
 const ENDPOINTS = [
   ["POST", "/excel/generate", "file · excel_filename (query param)"],
   ["GET", "/excel/download/{filename}", "filename"],
-  ["POST", "/query", "query (query param)"],
+  ["POST", "/query", "query · source (query params)"],
+  ["GET", "/query/documents", "—"],
+  ["POST", "/query/reindex", "—"],
   ["GET", "/", "—"],
 ];
 
+type Rebuild =
+  | { state: "idle" }
+  | { state: "running" }
+  | { state: "done"; chunks: number; documents: number }
+  | { state: "failed"; title: string; detail?: string };
+
 export default function SettingsPage() {
   const { health, target, refresh } = useHealth();
+  const [rebuild, setRebuild] = useState<Rebuild>({ state: "idle" });
+
+  const rebuildIndex = useCallback(async () => {
+    setRebuild({ state: "running" });
+    try {
+      const result = await reindex();
+      setRebuild({ state: "done", chunks: result.chunks, documents: result.documents });
+    } catch (error) {
+      setRebuild({
+        state: "failed",
+        title: error instanceof RequestFailed ? error.message : "The rebuild could not be started.",
+        detail:
+          error instanceof RequestFailed
+            ? error.detail
+            : "Check that the backend is running and reachable.",
+      });
+    }
+  }, []);
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-8">
