@@ -1,0 +1,3417 @@
+{
+    "schema_name": "DoclingDocument",
+    "version": "1.10.0",
+    "name": "1000073988",
+    "origin": {
+        "mimetype": "application/pdf",
+        "binary_hash": 1546494609261392054,
+        "filename": "1000073988.pdf"
+    },
+    "furniture": {
+        "self_ref": "#/furniture",
+        "children": [],
+        "content_layer": "furniture",
+        "name": "_root_",
+        "label": "unspecified"
+    },
+    "body": {
+        "self_ref": "#/body",
+        "children": [
+            {
+                "$ref": "#/texts/0"
+            },
+            {
+                "$ref": "#/texts/1"
+            },
+            {
+                "$ref": "#/groups/0"
+            },
+            {
+                "$ref": "#/groups/1"
+            },
+            {
+                "$ref": "#/tables/0"
+            },
+            {
+                "$ref": "#/texts/14"
+            },
+            {
+                "$ref": "#/groups/2"
+            },
+            {
+                "$ref": "#/pictures/0"
+            },
+            {
+                "$ref": "#/groups/3"
+            },
+            {
+                "$ref": "#/texts/21"
+            },
+            {
+                "$ref": "#/texts/22"
+            }
+        ],
+        "content_layer": "body",
+        "name": "_root_",
+        "label": "unspecified"
+    },
+    "groups": [
+        {
+            "self_ref": "#/groups/0",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [
+                {
+                    "$ref": "#/texts/2"
+                },
+                {
+                    "$ref": "#/texts/3"
+                }
+            ],
+            "content_layer": "body",
+            "name": "group",
+            "label": "key_value_area"
+        },
+        {
+            "self_ref": "#/groups/1",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [
+                {
+                    "$ref": "#/texts/4"
+                },
+                {
+                    "$ref": "#/texts/5"
+                },
+                {
+                    "$ref": "#/texts/6"
+                },
+                {
+                    "$ref": "#/texts/7"
+                },
+                {
+                    "$ref": "#/texts/8"
+                },
+                {
+                    "$ref": "#/texts/9"
+                },
+                {
+                    "$ref": "#/texts/10"
+                },
+                {
+                    "$ref": "#/texts/11"
+                },
+                {
+                    "$ref": "#/texts/12"
+                },
+                {
+                    "$ref": "#/texts/13"
+                }
+            ],
+            "content_layer": "body",
+            "name": "group",
+            "label": "form_area"
+        },
+        {
+            "self_ref": "#/groups/2",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [
+                {
+                    "$ref": "#/texts/15"
+                },
+                {
+                    "$ref": "#/texts/16"
+                },
+                {
+                    "$ref": "#/texts/17"
+                },
+                {
+                    "$ref": "#/texts/18"
+                },
+                {
+                    "$ref": "#/texts/19"
+                }
+            ],
+            "content_layer": "body",
+            "name": "group",
+            "label": "form_area"
+        },
+        {
+            "self_ref": "#/groups/3",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [
+                {
+                    "$ref": "#/texts/20"
+                }
+            ],
+            "content_layer": "body",
+            "name": "group",
+            "label": "key_value_area"
+        }
+    ],
+    "texts": [
+        {
+            "self_ref": "#/texts/0",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "section_header",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 51.73533121744792,
+                        "t": 739.4495964050293,
+                        "r": 177.16708374023438,
+                        "b": 713.9375,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        10
+                    ]
+                }
+            ],
+            "orig": "SCS Agency",
+            "text": "SCS Agency",
+            "level": 1
+        },
+        {
+            "self_ref": "#/texts/1",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 47.65625,
+                        "t": 716.6955642700195,
+                        "r": 182.94579060872397,
+                        "b": 668.4294331868489,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        59
+                    ]
+                }
+            ],
+            "orig": "Long Road Sixth Form College. Long Road. Cambridge. CB2 8PX",
+            "text": "Long Road Sixth Form College. Long Road. Cambridge. CB2 8PX"
+        },
+        {
+            "self_ref": "#/texts/2",
+            "parent": {
+                "$ref": "#/groups/0"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 48.336096445719406,
+                        "t": 656.7076619466145,
+                        "r": 192.8035685221354,
+                        "b": 644.296366373698,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        31
+                    ]
+                }
+            ],
+            "orig": "Main Director Tele: 07981423683",
+            "text": "Main Director Tele: 07981423683"
+        },
+        {
+            "self_ref": "#/texts/3",
+            "parent": {
+                "$ref": "#/groups/0"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 48.336096445719406,
+                        "t": 644.6411234537761,
+                        "r": 241.4126180013021,
+                        "b": 632.2298380533855,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        39
+                    ]
+                }
+            ],
+            "orig": "Website: www.scsagency18.blogspot.co.uk",
+            "text": "Website: www.scsagency18.blogspot.co.uk"
+        },
+        {
+            "self_ref": "#/texts/4",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 55.474489847819015,
+                        "t": 623.2661234537761,
+                        "r": 281.52360026041663,
+                        "b": 610.1653238932291,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        46
+                    ]
+                }
+            ],
+            "orig": "Name: Shelby Lucier (SCS Agency Main Direclor)",
+            "text": "Name: Shelby Lucier (SCS Agency Main Direclor)"
+        },
+        {
+            "self_ref": "#/texts/5",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 390.9789632161458,
+                        "t": 623.9556376139324,
+                        "r": 422.5918375651042,
+                        "b": 608.4415283203125,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        5
+                    ]
+                }
+            ],
+            "orig": "Date:",
+            "text": "Date:"
+        },
+        {
+            "self_ref": "#/texts/6",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 426.6708984375,
+                        "t": 624.9899190266926,
+                        "r": 471.2008870442708,
+                        "b": 612.2338663736979,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        8
+                    ]
+                }
+            ],
+            "orig": "13/02/15",
+            "text": "13/02/15"
+        },
+        {
+            "self_ref": "#/texts/7",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 56.83418273925781,
+                        "t": 608.0967712402344,
+                        "r": 172.40816243489584,
+                        "b": 595.6854756673177,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        21
+                    ]
+                }
+            ],
+            "orig": "Address: 6 Glebe Road",
+            "text": "Address: 6 Glebe Road"
+        },
+        {
+            "self_ref": "#/texts/8",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 56.83418273925781,
+                        "t": 592.9274190266927,
+                        "r": 139.43558756510419,
+                        "b": 580.1713663736979,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        15
+                    ]
+                }
+            ],
+            "orig": "City: Cambridge",
+            "text": "City: Cambridge"
+        },
+        {
+            "self_ref": "#/texts/9",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 222.71683756510416,
+                        "t": 592.9274190266927,
+                        "r": 331.83225504557294,
+                        "b": 580.516123453776,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        22
+                    ]
+                }
+            ],
+            "orig": "State: _Cambridgeshire",
+            "text": "State: _Cambridgeshire"
+        },
+        {
+            "self_ref": "#/texts/10",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 387.5797119140625,
+                        "t": 593.616933186849,
+                        "r": 479.0191243489583,
+                        "b": 580.1713663736979,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        18
+                    ]
+                }
+            ],
+            "orig": "Zip Code: _CB1 7SZ",
+            "text": "Zip Code: _CB1 7SZ"
+        },
+        {
+            "self_ref": "#/texts/11",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 56.154335021972656,
+                        "t": 579.4818522135416,
+                        "r": 104.76339213053386,
+                        "b": 566.3810424804688,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        6
+                    ]
+                }
+            ],
+            "orig": "Phone:",
+            "text": "Phone:"
+        },
+        {
+            "self_ref": "#/texts/12",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 101.02423095703125,
+                        "t": 580.1713663736979,
+                        "r": 164.58992513020834,
+                        "b": 567.4153238932291,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        11
+                    ]
+                }
+            ],
+            "orig": "07981423683",
+            "text": "07981423683"
+        },
+        {
+            "self_ref": "#/texts/13",
+            "parent": {
+                "$ref": "#/groups/1"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 283.5631306966146,
+                        "t": 579.8266092936198,
+                        "r": 411.7142740885417,
+                        "b": 565.6915283203125,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        24
+                    ]
+                }
+            ],
+            "orig": "Alt. Phone: 01223 507400",
+            "text": "Alt. Phone: 01223 507400"
+        },
+        {
+            "self_ref": "#/texts/14",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 53.43494923909505,
+                        "t": 299.883056640625,
+                        "r": 143.17474365234375,
+                        "b": 287.12699381510424,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        16
+                    ]
+                }
+            ],
+            "orig": "Important Notes:",
+            "text": "Important Notes:"
+        },
+        {
+            "self_ref": "#/texts/15",
+            "parent": {
+                "$ref": "#/groups/2"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 56.154335021972656,
+                        "t": 277.47379557291674,
+                        "r": 369.9036865234375,
+                        "b": 252.65120442708326,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        129
+                    ]
+                }
+            ],
+            "orig": "The guidlines of this invoice are striclly professional. The minimum wage for under 18's in the Unifed Kingdom is \u00a33.79 per hour.",
+            "text": "The guidlines of this invoice are striclly professional. The minimum wage for under 18's in the Unifed Kingdom is \u00a33.79 per hour."
+        },
+        {
+            "self_ref": "#/texts/16",
+            "parent": {
+                "$ref": "#/groups/2"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 389.6192626953125,
+                        "t": 273.336669921875,
+                        "r": 487.5172119140625,
+                        "b": 260.92537434895826,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        19
+                    ]
+                }
+            ],
+            "orig": "Sub Total: 1.981.02",
+            "text": "Sub Total: 1.981.02"
+        },
+        {
+            "self_ref": "#/texts/17",
+            "parent": {
+                "$ref": "#/groups/2"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 389.2793375651042,
+                        "t": 259.20161946614576,
+                        "r": 496.0152994791667,
+                        "b": 247.13505045572924,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        21
+                    ]
+                }
+            ],
+            "orig": "Tax: 20% VAT = 396.20",
+            "text": "Tax: 20% VAT = 396.20"
+        },
+        {
+            "self_ref": "#/texts/18",
+            "parent": {
+                "$ref": "#/groups/2"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 388.5994873046875,
+                        "t": 244.0322265625,
+                        "r": 451.8252360026042,
+                        "b": 230.93143717447913,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        10
+                    ]
+                }
+            ],
+            "orig": "Total Due:",
+            "text": "Total Due:"
+        },
+        {
+            "self_ref": "#/texts/19",
+            "parent": {
+                "$ref": "#/groups/2"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 451.8252360026042,
+                        "t": 244.72176106770826,
+                        "r": 498.394775390625,
+                        "b": 231.9656982421875,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        9
+                    ]
+                }
+            ],
+            "orig": "\u00a31,584.82",
+            "text": "\u00a31,584.82"
+        },
+        {
+            "self_ref": "#/texts/20",
+            "parent": {
+                "$ref": "#/groups/3"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "caption",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 259.76849365234375,
+                        "t": 149.2237548828125,
+                        "r": 372.6230875651042,
+                        "b": 134.399169921875,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        21
+                    ]
+                }
+            ],
+            "orig": "Authorized Signatures",
+            "text": "Authorized Signatures"
+        },
+        {
+            "self_ref": "#/texts/21",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "text",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 229.855224609375,
+                        "t": 90.95967610677087,
+                        "r": 388.2595621744792,
+                        "b": 75.445556640625,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        28
+                    ]
+                }
+            ],
+            "orig": "Thank You for Your Business!",
+            "text": "Thank You for Your Business!"
+        },
+        {
+            "self_ref": "#/texts/22",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "section_header",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 360.0,
+                        "t": 748.0,
+                        "r": 552.6666666666666,
+                        "b": 687.3333333333334,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        15
+                    ]
+                }
+            ],
+            "orig": "INVOICE INVOICE",
+            "text": "INVOICE INVOICE",
+            "level": 1
+        }
+    ],
+    "pictures": [
+        {
+            "self_ref": "#/pictures/0",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "picture",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 253.01995849609375,
+                        "t": 197.4049072265625,
+                        "r": 382.2791442871094,
+                        "b": 146.9993896484375,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "captions": [],
+            "references": [],
+            "footnotes": [],
+            "annotations": []
+        }
+    ],
+    "tables": [
+        {
+            "self_ref": "#/tables/0",
+            "parent": {
+                "$ref": "#/body"
+            },
+            "children": [],
+            "content_layer": "body",
+            "label": "table",
+            "prov": [
+                {
+                    "page_no": 1,
+                    "bbox": {
+                        "l": 49.49340057373047,
+                        "t": 535.6408081054688,
+                        "r": 538.0714111328125,
+                        "b": 308.49810791015625,
+                        "coord_origin": "BOTTOMLEFT"
+                    },
+                    "charspan": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "captions": [],
+            "references": [],
+            "footnotes": [],
+            "data": {
+                "table_cells": [
+                    {
+                        "bbox": {
+                            "l": 143.17474365234375,
+                            "t": 309.75,
+                            "r": 205.04081217447916,
+                            "b": 323.54032389322913,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 0,
+                        "end_row_offset_idx": 1,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Description",
+                        "column_header": true,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 321.6345621744792,
+                            "t": 309.75,
+                            "r": 372.6230875651042,
+                            "b": 322.50606282552087,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 0,
+                        "end_row_offset_idx": 1,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "Time Spent",
+                        "column_header": true,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 388.5994873046875,
+                            "t": 309.06048583984375,
+                            "r": 463.7225748697917,
+                            "b": 323.54032389322913,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 0,
+                        "end_row_offset_idx": 1,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "Price (\u00a3 xtime)",
+                        "column_header": true,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 485.4776611328125,
+                            "t": 309.06048583984375,
+                            "r": 529.3277994791667,
+                            "b": 323.1955769856771,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 0,
+                        "end_row_offset_idx": 1,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "Total(\u00a3)",
+                        "column_header": true,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 53.09502410888672,
+                            "t": 324.5746053059896,
+                            "r": 215.57843017578125,
+                            "b": 336.98590087890625,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 1,
+                        "end_row_offset_idx": 2,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Image caplure & record of meetings",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 327.07334391276044,
+                            "t": 323.54032389322913,
+                            "r": 363.105224609375,
+                            "b": 336.6411336263021,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 1,
+                        "end_row_offset_idx": 2,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "2 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 415.4534505208333,
+                            "t": 323.54032389322913,
+                            "r": 438.2283121744792,
+                            "b": 336.6411336263021,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 1,
+                        "end_row_offset_idx": 2,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "7.58",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 494.6555989583333,
+                            "t": 323.88509114583337,
+                            "r": 517.4304606119792,
+                            "b": 336.6411336263021,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 1,
+                        "end_row_offset_idx": 2,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "7.58",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 53.09502410888672,
+                            "t": 337.6754150390625,
+                            "r": 118.02040608723958,
+                            "b": 350.43145751953125,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 2,
+                        "end_row_offset_idx": 3,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Image editing",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 330.1326497395833,
+                            "t": 337.6754150390625,
+                            "r": 365.48468017578125,
+                            "b": 349.741943359375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 2,
+                        "end_row_offset_idx": 3,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "4 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 413.073974609375,
+                            "t": 336.98590087890625,
+                            "r": 440.2678629557292,
+                            "b": 350.43145751953125,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 2,
+                        "end_row_offset_idx": 3,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "15.16",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 491.25634765625,
+                            "t": 338.36492919921875,
+                            "r": 518.4502360026042,
+                            "b": 352.5,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 2,
+                        "end_row_offset_idx": 3,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "22.74",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 53.09502410888672,
+                            "t": 352.15525309244794,
+                            "r": 150.65305582682294,
+                            "b": 365.2560628255208,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 3,
+                        "end_row_offset_idx": 4,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Initial sticker planning",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 329.1128743489583,
+                            "t": 350.43145751953125,
+                            "r": 365.48468017578125,
+                            "b": 363.5322672526042,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 3,
+                        "end_row_offset_idx": 4,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "2 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 414.09375,
+                            "t": 350.7762247721354,
+                            "r": 436.8686116536458,
+                            "b": 363.5322672526042,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 3,
+                        "end_row_offset_idx": 4,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "7.58",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 491.5962727864583,
+                            "t": 351.46573893229163,
+                            "r": 519.1300862630208,
+                            "b": 363.87701416015625,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 3,
+                        "end_row_offset_idx": 4,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "30.32",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 53.09502410888672,
+                            "t": 365.2560628255208,
+                            "r": 136.71619669596356,
+                            "b": 377.66733805338544,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 4,
+                        "end_row_offset_idx": 5,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Noles being laken",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 327.07334391276044,
+                            "t": 365.2560628255208,
+                            "r": 364.4649251302083,
+                            "b": 378.3568522135417,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 4,
+                        "end_row_offset_idx": 5,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "20 mins",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 414.09375,
+                            "t": 364.9112955729167,
+                            "r": 436.8686116536458,
+                            "b": 377.66733805338544,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 4,
+                        "end_row_offset_idx": 5,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "0.13",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 491.5962727864583,
+                            "t": 364.9112955729167,
+                            "r": 519.1300862630208,
+                            "b": 378.3568522135417,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 4,
+                        "end_row_offset_idx": 5,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "30.45",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 53.774871826171875,
+                            "t": 379.04638671875,
+                            "r": 161.53060913085938,
+                            "b": 392.491943359375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 5,
+                        "end_row_offset_idx": 6,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Initial postcard planning",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 327.753173828125,
+                            "t": 379.73590087890625,
+                            "r": 363.4451497395833,
+                            "b": 392.8367106119792,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 5,
+                        "end_row_offset_idx": 6,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "6 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 413.073974609375,
+                            "t": 379.73590087890625,
+                            "r": 439.9279378255208,
+                            "b": 392.1471761067708,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 5,
+                        "end_row_offset_idx": 6,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "22.74",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 491.25634765625,
+                            "t": 377.3225911458333,
+                            "r": 519.1300862630208,
+                            "b": 390.7681477864583,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 5,
+                        "end_row_offset_idx": 6,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "53.19",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 53.774871826171875,
+                            "t": 393.52622477213544,
+                            "r": 158.81121826171875,
+                            "b": 406.97178141276044,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 6,
+                        "end_row_offset_idx": 7,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Note editing & finalising",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 330.8125,
+                            "t": 392.1471761067708,
+                            "r": 362.08544921875,
+                            "b": 404.5584716796875,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 6,
+                        "end_row_offset_idx": 7,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "1 hour",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 412.3941243489583,
+                            "t": 392.491943359375,
+                            "r": 435.1689860026042,
+                            "b": 405.24798583984375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 6,
+                        "end_row_offset_idx": 7,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "3.79",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 490.5765380859375,
+                            "t": 393.8709716796875,
+                            "r": 518.1103108723958,
+                            "b": 407.31654866536456,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 6,
+                        "end_row_offset_idx": 7,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "56.98",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 55.81441243489583,
+                            "t": 408.0060628255208,
+                            "r": 132.97704060872394,
+                            "b": 419.7278238932292,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 7,
+                        "end_row_offset_idx": 8,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Contacting client",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 328.0930989583333,
+                            "t": 406.62701416015625,
+                            "r": 363.7850748697917,
+                            "b": 419.7278238932292,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 7,
+                        "end_row_offset_idx": 8,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "4 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 414.7736002604167,
+                            "t": 406.2822672526042,
+                            "r": 442.307373046875,
+                            "b": 419.7278238932292,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 7,
+                        "end_row_offset_idx": 8,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "15.16",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 490.9164632161458,
+                            "t": 406.62701416015625,
+                            "r": 518.1103108723958,
+                            "b": 419.03830973307294,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 7,
+                        "end_row_offset_idx": 8,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "72.14",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 55.474489847819015,
+                            "t": 422.14113362630206,
+                            "r": 286.28251139322913,
+                            "b": 433.5181477864583,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 8,
+                        "end_row_offset_idx": 9,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Finalising ideas (stickers & postcard - front and back)",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 329.1128743489583,
+                            "t": 420.76210530598956,
+                            "r": 365.48468017578125,
+                            "b": 433.8629150390625,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 8,
+                        "end_row_offset_idx": 9,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "6 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 414.09375,
+                            "t": 420.76210530598956,
+                            "r": 441.6275227864583,
+                            "b": 433.17340087890625,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 8,
+                        "end_row_offset_idx": 9,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "22.74",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 488.8769124348958,
+                            "t": 420.76210530598956,
+                            "r": 516.0707600911458,
+                            "b": 433.17340087890625,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 8,
+                        "end_row_offset_idx": 9,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "94.88",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 56.494260152180985,
+                            "t": 434.8971761067708,
+                            "r": 243.4521687825521,
+                            "b": 446.9637044270833,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 9,
+                        "end_row_offset_idx": 10,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Printing stickers - 6.5cm width x 600 copies",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 333.19195556640625,
+                            "t": 434.8971761067708,
+                            "r": 364.4649251302083,
+                            "b": 447.3084716796875,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 9,
+                        "end_row_offset_idx": 10,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "1 hour",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 414.4336751302083,
+                            "t": 434.55242919921875,
+                            "r": 460.3233235677083,
+                            "b": 447.3084716796875,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 9,
+                        "end_row_offset_idx": 10,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "54.00+3.79",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 489.2168375651042,
+                            "t": 432.82863362630206,
+                            "r": 521.1696370442708,
+                            "b": 446.2742106119792,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 9,
+                        "end_row_offset_idx": 10,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "152.67",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 55.81441243489583,
+                            "t": 449.0322672526042,
+                            "r": 208.4400431315104,
+                            "b": 461.4435628255208,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 10,
+                        "end_row_offset_idx": 11,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Printing postcards - A5 x 40 copies",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 332.85203043619794,
+                            "t": 449.3770345052083,
+                            "r": 364.4649251302083,
+                            "b": 461.788330078125,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 10,
+                        "end_row_offset_idx": 11,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "1 hour",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 414.09375,
+                            "t": 448.3427327473958,
+                            "r": 460.3233235677083,
+                            "b": 463.8568522135417,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 10,
+                        "end_row_offset_idx": 11,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "1.800+3.79",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 488.1970621744792,
+                            "t": 449.3770345052083,
+                            "r": 527.628173828125,
+                            "b": 463.1673583984375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 10,
+                        "end_row_offset_idx": 11,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "1,956.46",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 56.154335021972656,
+                            "t": 462.4778238932292,
+                            "r": 303.6186116536458,
+                            "b": 475.5786539713542,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 11,
+                        "end_row_offset_idx": 12,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Bus Time Travel - 30 minutes one way (30 min x 4 travels)",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 331.83225504557294,
+                            "t": 461.4435628255208,
+                            "r": 366.84438069661456,
+                            "b": 475.5786539713542,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 11,
+                        "end_row_offset_idx": 12,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "2 hours",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 415.113525390625,
+                            "t": 462.133056640625,
+                            "r": 441.9674479166667,
+                            "b": 474.5443522135417,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 11,
+                        "end_row_offset_idx": 12,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "16.80",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 488.5369873046875,
+                            "t": 462.8225911458333,
+                            "r": 527.2882486979167,
+                            "b": 474.8891194661458,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 11,
+                        "end_row_offset_idx": 12,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "1.973.26",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 55.81441243489583,
+                            "t": 477.991943359375,
+                            "r": 192.4636433919271,
+                            "b": 490.0584716796875,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 12,
+                        "end_row_offset_idx": 13,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Travel to bus stop from college",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 331.83225504557294,
+                            "t": 477.3024495442708,
+                            "r": 367.86415608723956,
+                            "b": 490.4032389322917,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 12,
+                        "end_row_offset_idx": 13,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "10 mins",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 418.1728108723958,
+                            "t": 478.6814778645833,
+                            "r": 439.9279378255208,
+                            "b": 490.4032389322917,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 12,
+                        "end_row_offset_idx": 13,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "0.06",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 486.8373616536458,
+                            "t": 476.6129150390625,
+                            "r": 525.588623046875,
+                            "b": 490.4032389322917,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 12,
+                        "end_row_offset_idx": 13,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "1.973.32",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 56.154335021972656,
+                            "t": 490.4032389322917,
+                            "r": 229.855224609375,
+                            "b": 501.7802327473958,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 13,
+                        "end_row_offset_idx": 14,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Travel from bus stop to Burwash Manner",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 331.83225504557294,
+                            "t": 488.679443359375,
+                            "r": 367.86415608723956,
+                            "b": 501.7802327473958,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 13,
+                        "end_row_offset_idx": 14,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "10 mins",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 417.8328857421875,
+                            "t": 490.0584716796875,
+                            "r": 440.6077880859375,
+                            "b": 502.8145345052083,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 13,
+                        "end_row_offset_idx": 14,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "0.06",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 487.1772867838542,
+                            "t": 489.3689778645833,
+                            "r": 526.9483235677083,
+                            "b": 503.1593017578125,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 13,
+                        "end_row_offset_idx": 14,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "1.973.38",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 57.17410532633464,
+                            "t": 504.1935628255208,
+                            "r": 167.9891560872396,
+                            "b": 516.6048583984375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 14,
+                        "end_row_offset_idx": 15,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 1,
+                        "text": "Meeting running time x2",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 328.0930989583333,
+                            "t": 503.5040283203125,
+                            "r": 377.721923828125,
+                            "b": 516.6048583984375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 14,
+                        "end_row_offset_idx": 15,
+                        "start_col_offset_idx": 1,
+                        "end_col_offset_idx": 2,
+                        "text": "2 hours 10",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 419.1925862630208,
+                            "t": 503.1593017578125,
+                            "r": 441.9674479166667,
+                            "b": 516.2600911458333,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 14,
+                        "end_row_offset_idx": 15,
+                        "start_col_offset_idx": 2,
+                        "end_col_offset_idx": 3,
+                        "text": "7.64",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 488.1970621744792,
+                            "t": 504.883056640625,
+                            "r": 527.2882486979167,
+                            "b": 516.9496256510417,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 14,
+                        "end_row_offset_idx": 15,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "1.981.02",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 56.83418273925781,
+                            "t": 519.7076822916667,
+                            "r": 120.7397969563802,
+                            "b": 531.429443359375,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 3,
+                        "start_row_offset_idx": 15,
+                        "end_row_offset_idx": 16,
+                        "start_col_offset_idx": 0,
+                        "end_col_offset_idx": 3,
+                        "text": "GRAND TOTAL",
+                        "column_header": false,
+                        "row_header": true,
+                        "row_section": false,
+                        "fillable": false
+                    },
+                    {
+                        "bbox": {
+                            "l": 481.0586751302083,
+                            "t": 519.0181477864583,
+                            "r": 526.2684733072917,
+                            "b": 531.7742106119792,
+                            "coord_origin": "TOPLEFT"
+                        },
+                        "row_span": 1,
+                        "col_span": 1,
+                        "start_row_offset_idx": 15,
+                        "end_row_offset_idx": 16,
+                        "start_col_offset_idx": 3,
+                        "end_col_offset_idx": 4,
+                        "text": "\u00a31.981.02",
+                        "column_header": false,
+                        "row_header": false,
+                        "row_section": false,
+                        "fillable": false
+                    }
+                ],
+                "num_rows": 16,
+                "num_cols": 4,
+                "orientation": "rot_0",
+                "grid": [
+                    [
+                        {
+                            "bbox": {
+                                "l": 143.17474365234375,
+                                "t": 309.75,
+                                "r": 205.04081217447916,
+                                "b": 323.54032389322913,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 0,
+                            "end_row_offset_idx": 1,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Description",
+                            "column_header": true,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 321.6345621744792,
+                                "t": 309.75,
+                                "r": 372.6230875651042,
+                                "b": 322.50606282552087,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 0,
+                            "end_row_offset_idx": 1,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "Time Spent",
+                            "column_header": true,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 388.5994873046875,
+                                "t": 309.06048583984375,
+                                "r": 463.7225748697917,
+                                "b": 323.54032389322913,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 0,
+                            "end_row_offset_idx": 1,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "Price (\u00a3 xtime)",
+                            "column_header": true,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 485.4776611328125,
+                                "t": 309.06048583984375,
+                                "r": 529.3277994791667,
+                                "b": 323.1955769856771,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 0,
+                            "end_row_offset_idx": 1,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "Total(\u00a3)",
+                            "column_header": true,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 53.09502410888672,
+                                "t": 324.5746053059896,
+                                "r": 215.57843017578125,
+                                "b": 336.98590087890625,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 1,
+                            "end_row_offset_idx": 2,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Image caplure & record of meetings",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 327.07334391276044,
+                                "t": 323.54032389322913,
+                                "r": 363.105224609375,
+                                "b": 336.6411336263021,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 1,
+                            "end_row_offset_idx": 2,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "2 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 415.4534505208333,
+                                "t": 323.54032389322913,
+                                "r": 438.2283121744792,
+                                "b": 336.6411336263021,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 1,
+                            "end_row_offset_idx": 2,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "7.58",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 494.6555989583333,
+                                "t": 323.88509114583337,
+                                "r": 517.4304606119792,
+                                "b": 336.6411336263021,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 1,
+                            "end_row_offset_idx": 2,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "7.58",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 53.09502410888672,
+                                "t": 337.6754150390625,
+                                "r": 118.02040608723958,
+                                "b": 350.43145751953125,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 2,
+                            "end_row_offset_idx": 3,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Image editing",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 330.1326497395833,
+                                "t": 337.6754150390625,
+                                "r": 365.48468017578125,
+                                "b": 349.741943359375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 2,
+                            "end_row_offset_idx": 3,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "4 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 413.073974609375,
+                                "t": 336.98590087890625,
+                                "r": 440.2678629557292,
+                                "b": 350.43145751953125,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 2,
+                            "end_row_offset_idx": 3,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "15.16",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 491.25634765625,
+                                "t": 338.36492919921875,
+                                "r": 518.4502360026042,
+                                "b": 352.5,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 2,
+                            "end_row_offset_idx": 3,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "22.74",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 53.09502410888672,
+                                "t": 352.15525309244794,
+                                "r": 150.65305582682294,
+                                "b": 365.2560628255208,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 3,
+                            "end_row_offset_idx": 4,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Initial sticker planning",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 329.1128743489583,
+                                "t": 350.43145751953125,
+                                "r": 365.48468017578125,
+                                "b": 363.5322672526042,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 3,
+                            "end_row_offset_idx": 4,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "2 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 414.09375,
+                                "t": 350.7762247721354,
+                                "r": 436.8686116536458,
+                                "b": 363.5322672526042,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 3,
+                            "end_row_offset_idx": 4,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "7.58",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 491.5962727864583,
+                                "t": 351.46573893229163,
+                                "r": 519.1300862630208,
+                                "b": 363.87701416015625,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 3,
+                            "end_row_offset_idx": 4,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "30.32",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 53.09502410888672,
+                                "t": 365.2560628255208,
+                                "r": 136.71619669596356,
+                                "b": 377.66733805338544,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 4,
+                            "end_row_offset_idx": 5,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Noles being laken",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 327.07334391276044,
+                                "t": 365.2560628255208,
+                                "r": 364.4649251302083,
+                                "b": 378.3568522135417,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 4,
+                            "end_row_offset_idx": 5,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "20 mins",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 414.09375,
+                                "t": 364.9112955729167,
+                                "r": 436.8686116536458,
+                                "b": 377.66733805338544,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 4,
+                            "end_row_offset_idx": 5,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "0.13",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 491.5962727864583,
+                                "t": 364.9112955729167,
+                                "r": 519.1300862630208,
+                                "b": 378.3568522135417,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 4,
+                            "end_row_offset_idx": 5,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "30.45",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 53.774871826171875,
+                                "t": 379.04638671875,
+                                "r": 161.53060913085938,
+                                "b": 392.491943359375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 5,
+                            "end_row_offset_idx": 6,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Initial postcard planning",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 327.753173828125,
+                                "t": 379.73590087890625,
+                                "r": 363.4451497395833,
+                                "b": 392.8367106119792,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 5,
+                            "end_row_offset_idx": 6,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "6 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 413.073974609375,
+                                "t": 379.73590087890625,
+                                "r": 439.9279378255208,
+                                "b": 392.1471761067708,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 5,
+                            "end_row_offset_idx": 6,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "22.74",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 491.25634765625,
+                                "t": 377.3225911458333,
+                                "r": 519.1300862630208,
+                                "b": 390.7681477864583,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 5,
+                            "end_row_offset_idx": 6,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "53.19",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 53.774871826171875,
+                                "t": 393.52622477213544,
+                                "r": 158.81121826171875,
+                                "b": 406.97178141276044,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 6,
+                            "end_row_offset_idx": 7,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Note editing & finalising",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 330.8125,
+                                "t": 392.1471761067708,
+                                "r": 362.08544921875,
+                                "b": 404.5584716796875,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 6,
+                            "end_row_offset_idx": 7,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "1 hour",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 412.3941243489583,
+                                "t": 392.491943359375,
+                                "r": 435.1689860026042,
+                                "b": 405.24798583984375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 6,
+                            "end_row_offset_idx": 7,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "3.79",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 490.5765380859375,
+                                "t": 393.8709716796875,
+                                "r": 518.1103108723958,
+                                "b": 407.31654866536456,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 6,
+                            "end_row_offset_idx": 7,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "56.98",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 55.81441243489583,
+                                "t": 408.0060628255208,
+                                "r": 132.97704060872394,
+                                "b": 419.7278238932292,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 7,
+                            "end_row_offset_idx": 8,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Contacting client",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 328.0930989583333,
+                                "t": 406.62701416015625,
+                                "r": 363.7850748697917,
+                                "b": 419.7278238932292,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 7,
+                            "end_row_offset_idx": 8,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "4 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 414.7736002604167,
+                                "t": 406.2822672526042,
+                                "r": 442.307373046875,
+                                "b": 419.7278238932292,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 7,
+                            "end_row_offset_idx": 8,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "15.16",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 490.9164632161458,
+                                "t": 406.62701416015625,
+                                "r": 518.1103108723958,
+                                "b": 419.03830973307294,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 7,
+                            "end_row_offset_idx": 8,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "72.14",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 55.474489847819015,
+                                "t": 422.14113362630206,
+                                "r": 286.28251139322913,
+                                "b": 433.5181477864583,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 8,
+                            "end_row_offset_idx": 9,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Finalising ideas (stickers & postcard - front and back)",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 329.1128743489583,
+                                "t": 420.76210530598956,
+                                "r": 365.48468017578125,
+                                "b": 433.8629150390625,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 8,
+                            "end_row_offset_idx": 9,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "6 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 414.09375,
+                                "t": 420.76210530598956,
+                                "r": 441.6275227864583,
+                                "b": 433.17340087890625,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 8,
+                            "end_row_offset_idx": 9,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "22.74",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 488.8769124348958,
+                                "t": 420.76210530598956,
+                                "r": 516.0707600911458,
+                                "b": 433.17340087890625,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 8,
+                            "end_row_offset_idx": 9,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "94.88",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 56.494260152180985,
+                                "t": 434.8971761067708,
+                                "r": 243.4521687825521,
+                                "b": 446.9637044270833,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 9,
+                            "end_row_offset_idx": 10,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Printing stickers - 6.5cm width x 600 copies",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 333.19195556640625,
+                                "t": 434.8971761067708,
+                                "r": 364.4649251302083,
+                                "b": 447.3084716796875,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 9,
+                            "end_row_offset_idx": 10,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "1 hour",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 414.4336751302083,
+                                "t": 434.55242919921875,
+                                "r": 460.3233235677083,
+                                "b": 447.3084716796875,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 9,
+                            "end_row_offset_idx": 10,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "54.00+3.79",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 489.2168375651042,
+                                "t": 432.82863362630206,
+                                "r": 521.1696370442708,
+                                "b": 446.2742106119792,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 9,
+                            "end_row_offset_idx": 10,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "152.67",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 55.81441243489583,
+                                "t": 449.0322672526042,
+                                "r": 208.4400431315104,
+                                "b": 461.4435628255208,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 10,
+                            "end_row_offset_idx": 11,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Printing postcards - A5 x 40 copies",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 332.85203043619794,
+                                "t": 449.3770345052083,
+                                "r": 364.4649251302083,
+                                "b": 461.788330078125,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 10,
+                            "end_row_offset_idx": 11,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "1 hour",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 414.09375,
+                                "t": 448.3427327473958,
+                                "r": 460.3233235677083,
+                                "b": 463.8568522135417,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 10,
+                            "end_row_offset_idx": 11,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "1.800+3.79",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 488.1970621744792,
+                                "t": 449.3770345052083,
+                                "r": 527.628173828125,
+                                "b": 463.1673583984375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 10,
+                            "end_row_offset_idx": 11,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "1,956.46",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 56.154335021972656,
+                                "t": 462.4778238932292,
+                                "r": 303.6186116536458,
+                                "b": 475.5786539713542,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 11,
+                            "end_row_offset_idx": 12,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Bus Time Travel - 30 minutes one way (30 min x 4 travels)",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 331.83225504557294,
+                                "t": 461.4435628255208,
+                                "r": 366.84438069661456,
+                                "b": 475.5786539713542,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 11,
+                            "end_row_offset_idx": 12,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "2 hours",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 415.113525390625,
+                                "t": 462.133056640625,
+                                "r": 441.9674479166667,
+                                "b": 474.5443522135417,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 11,
+                            "end_row_offset_idx": 12,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "16.80",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 488.5369873046875,
+                                "t": 462.8225911458333,
+                                "r": 527.2882486979167,
+                                "b": 474.8891194661458,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 11,
+                            "end_row_offset_idx": 12,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "1.973.26",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 55.81441243489583,
+                                "t": 477.991943359375,
+                                "r": 192.4636433919271,
+                                "b": 490.0584716796875,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 12,
+                            "end_row_offset_idx": 13,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Travel to bus stop from college",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 331.83225504557294,
+                                "t": 477.3024495442708,
+                                "r": 367.86415608723956,
+                                "b": 490.4032389322917,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 12,
+                            "end_row_offset_idx": 13,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "10 mins",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 418.1728108723958,
+                                "t": 478.6814778645833,
+                                "r": 439.9279378255208,
+                                "b": 490.4032389322917,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 12,
+                            "end_row_offset_idx": 13,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "0.06",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 486.8373616536458,
+                                "t": 476.6129150390625,
+                                "r": 525.588623046875,
+                                "b": 490.4032389322917,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 12,
+                            "end_row_offset_idx": 13,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "1.973.32",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 56.154335021972656,
+                                "t": 490.4032389322917,
+                                "r": 229.855224609375,
+                                "b": 501.7802327473958,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 13,
+                            "end_row_offset_idx": 14,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Travel from bus stop to Burwash Manner",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 331.83225504557294,
+                                "t": 488.679443359375,
+                                "r": 367.86415608723956,
+                                "b": 501.7802327473958,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 13,
+                            "end_row_offset_idx": 14,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "10 mins",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 417.8328857421875,
+                                "t": 490.0584716796875,
+                                "r": 440.6077880859375,
+                                "b": 502.8145345052083,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 13,
+                            "end_row_offset_idx": 14,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "0.06",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 487.1772867838542,
+                                "t": 489.3689778645833,
+                                "r": 526.9483235677083,
+                                "b": 503.1593017578125,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 13,
+                            "end_row_offset_idx": 14,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "1.973.38",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 57.17410532633464,
+                                "t": 504.1935628255208,
+                                "r": 167.9891560872396,
+                                "b": 516.6048583984375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 14,
+                            "end_row_offset_idx": 15,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 1,
+                            "text": "Meeting running time x2",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 328.0930989583333,
+                                "t": 503.5040283203125,
+                                "r": 377.721923828125,
+                                "b": 516.6048583984375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 14,
+                            "end_row_offset_idx": 15,
+                            "start_col_offset_idx": 1,
+                            "end_col_offset_idx": 2,
+                            "text": "2 hours 10",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 419.1925862630208,
+                                "t": 503.1593017578125,
+                                "r": 441.9674479166667,
+                                "b": 516.2600911458333,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 14,
+                            "end_row_offset_idx": 15,
+                            "start_col_offset_idx": 2,
+                            "end_col_offset_idx": 3,
+                            "text": "7.64",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 488.1970621744792,
+                                "t": 504.883056640625,
+                                "r": 527.2882486979167,
+                                "b": 516.9496256510417,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 14,
+                            "end_row_offset_idx": 15,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "1.981.02",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ],
+                    [
+                        {
+                            "bbox": {
+                                "l": 56.83418273925781,
+                                "t": 519.7076822916667,
+                                "r": 120.7397969563802,
+                                "b": 531.429443359375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 3,
+                            "start_row_offset_idx": 15,
+                            "end_row_offset_idx": 16,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 3,
+                            "text": "GRAND TOTAL",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 56.83418273925781,
+                                "t": 519.7076822916667,
+                                "r": 120.7397969563802,
+                                "b": 531.429443359375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 3,
+                            "start_row_offset_idx": 15,
+                            "end_row_offset_idx": 16,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 3,
+                            "text": "GRAND TOTAL",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 56.83418273925781,
+                                "t": 519.7076822916667,
+                                "r": 120.7397969563802,
+                                "b": 531.429443359375,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 3,
+                            "start_row_offset_idx": 15,
+                            "end_row_offset_idx": 16,
+                            "start_col_offset_idx": 0,
+                            "end_col_offset_idx": 3,
+                            "text": "GRAND TOTAL",
+                            "column_header": false,
+                            "row_header": true,
+                            "row_section": false,
+                            "fillable": false
+                        },
+                        {
+                            "bbox": {
+                                "l": 481.0586751302083,
+                                "t": 519.0181477864583,
+                                "r": 526.2684733072917,
+                                "b": 531.7742106119792,
+                                "coord_origin": "TOPLEFT"
+                            },
+                            "row_span": 1,
+                            "col_span": 1,
+                            "start_row_offset_idx": 15,
+                            "end_row_offset_idx": 16,
+                            "start_col_offset_idx": 3,
+                            "end_col_offset_idx": 4,
+                            "text": "\u00a31.981.02",
+                            "column_header": false,
+                            "row_header": false,
+                            "row_section": false,
+                            "fillable": false
+                        }
+                    ]
+                ]
+            },
+            "annotations": []
+        }
+    ],
+    "key_value_items": [],
+    "form_items": [],
+    "pages": {
+        "1": {
+            "size": {
+                "width": 595.0,
+                "height": 842.0
+            },
+            "page_no": 1
+        }
+    }
+}
