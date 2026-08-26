@@ -73,9 +73,13 @@ export function AnswerDetail({ detail }: { detail: NonNullable<ChatMessage["deta
       ) : null}
 
       {sources.length > 0 ? (
-        <details className="group">
-          <summary className="label mb-0 cursor-pointer list-none">
-            Passages retrieved ({sources.length}) · click to inspect
+        <details>
+          {/* `.label` sets display:block, which hides the disclosure marker in
+              Chrome when applied to the summary itself — hence the inner span. */}
+          <summary className="cursor-pointer text-fg-3">
+            <span className="label mb-0 inline">
+              Passages retrieved ({sources.length})
+            </span>
           </summary>
           <ul className="mt-3 flex flex-col gap-2">
             {sources.map((source) => (
