@@ -152,6 +152,23 @@ server, so a cleared list does not delete anything. The chat thread is stored
 the same way and capped at the last 80 turns, since answers carry their quoted
 excerpts and the quota is finite.
 
-The FAISS store is built once, from everything in `md_files/`, the first time a
-question is asked, then cached on disk. Documents converted afterwards are not
-searchable until `faiss_store/` is deleted. Settings explains this on screen.
+## Scoping a question to one document
+
+Retrieval over a handful of near-identical invoices reliably answers from the
+wrong one: the chunks are so similar that the document you meant may not make
+the global top-k at all, and naming the file in the question does not help —
+the model can only work with the passages it was handed.
+
+So the Ask screen has a document picker, backed by `GET /api/documents`. Picking
+a file sends it as `source`, and the backend filters retrieval to that file
+before the model sees anything. Every answer also carries the passages that
+produced it, each labelled with its filename and similarity score, so an answer
+drawn from the wrong document is visible rather than plausible. Convert
+pre-selects whatever it just produced, via `src/lib/scope.ts`.
+
+The FAISS store keeps a manifest of exactly which files it indexed, at which
+size and mtime, with which model and chunk settings. Each conversion indexes its
+own Markdown immediately; if the manifest ever stops matching `md_files/`, the
+next question resynchronises or rebuilds. Deleting `faiss_store/` by hand is no
+longer necessary — Settings has a rebuild button for the cases that cannot
+self-heal, such as a corrupt store or a chunk size changed by hand.
