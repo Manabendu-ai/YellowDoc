@@ -5,32 +5,70 @@ import {
   describeFetchFailure,
   readBackendError,
 } from "@/lib/server-config";
-import type { RagResponse } from "@/lib/types";
+import type { RagResponse, RagSource } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
+/** Trust nothing about the shape of `sources`; the citation list drives the UI. */
+function normaliseSources(value: unknown): RagSource[] {
+  if (!Array.isArray(value)) return [];
+
+  return value.flatMap((item): RagSource[] => {
+    if (typeof item !== "object" || item === null) return [];
+    const entry = item as Partial<RagSource>;
+    const excerpt = typeof entry.excerpt === "string" ? entry.excerpt : "";
+    if (!excerpt) return [];
+    return [
+      {
+        document: typeof entry.document === "string" ? entry.document : "unknown",
+        source: typeof entry.source === "string" ? entry.source : "unknown",
+        chunk: Number.isFinite(entry.chunk) ? Number(entry.chunk) : 0,
+        score: Number.isFinite(entry.score) ? Number(entry.score) : 0,
+        excerpt,
+      },
+    ];
+  });
+}
+
+function stringsOnly(value: unknown): string[] {
+  return Array.isArray(value) ? value.filter((v): v is string => typeof v === "string") : [];
+}
+
 /**
- * POST /api/query  { query: string }
+ * POST /api/query  { query: string, source?: string }
  *
- * The backend takes `query` as a query-string parameter, not a body, so this
- * route accepts a normal JSON body from the browser and rewrites it.
+ * The backend takes both as query-string parameters, not a body, so this route
+ * accepts a normal JSON body from the browser and rewrites it.
+ *
+ * `source` is a filename from GET /api/documents. When present, retrieval is
+ * restricted to that one document — without it, a question about one invoice
+ * can be answered from a near-identical one.
  */
 export async function POST(request: Request) {
   let query = "";
+  let source = "";
 
   try {
-    const body = (await request.json()) as { query?: unknown };
+    const body = (await request.json()) as { query?: unknown; source?: unknown };
     query = typeof body.query === "string" ? body.query.trim() : "";
+    source = typeof body.source === "string" ? body.source.trim() : "";
   } catch {
-    return NextResponse.json({ error: "Send a JSON body shaped { query }." }, { status: 400 });
+    return NextResponse.json(
+      { error: "Send a JSON body shaped { query, source? }." },
+      { status: 400 },
+    );
   }
 
   if (!query) {
     return NextResponse.json({ error: "Type a question first." }, { status: 400 });
   }
 
-  const target = `${API_URL}/query?${new URLSearchParams({ query })}`;
+  /* Built conditionally: sending `source=` empty would make FastAPI scope the
+     search to a document literally named "", which matches nothing. */
+  const params = new URLSearchParams({ query });
+  if (source) params.set("source", source);
+  const target = `${API_URL}/query?${params}`;
 
   try {
     const res = await fetch(target, {
@@ -49,18 +87,20 @@ export async function POST(request: Request) {
 
     const raw: unknown = await res.json();
 
-    /* When nothing in the index matches, RAGSearch returns the bare string
-       "No Relavant Document Found!" instead of the structured model. Normalise
-       it so the interface has one shape to render. */
+    /* Older backends returned a bare string when nothing matched. Normalise it
+       so the interface only ever renders one shape. */
     if (typeof raw === "string") {
       return NextResponse.json({
         query,
         answer:
+          raw.trim() ||
           "Nothing in the index matches that question yet. Convert a document first, or try different wording.",
         summary: "",
         confidence: "none",
         key_points: [],
         examples: [],
+        scope: source || null,
+        sources: [],
       } satisfies RagResponse);
     }
 
@@ -71,8 +111,12 @@ export async function POST(request: Request) {
       answer: body.answer ?? "",
       summary: body.summary ?? "",
       confidence: body.confidence ?? "",
-      key_points: Array.isArray(body.key_points) ? body.key_points : [],
-      examples: Array.isArray(body.examples) ? body.examples : [],
+      key_points: stringsOnly(body.key_points),
+      examples: stringsOnly(body.examples),
+      /* Echo the request's scope when the backend omits it, so the transcript
+         always records what the answer was allowed to see. */
+      scope: typeof body.scope === "string" && body.scope ? body.scope : source || null,
+      sources: normaliseSources(body.sources),
     } satisfies RagResponse);
   } catch (err) {
     return NextResponse.json({ error: describeFetchFailure(err) }, { status: 502 });
