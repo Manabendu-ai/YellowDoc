@@ -51,7 +51,9 @@ endpoint into something the browser can use:
 | ----------------------------- | ------------------------------------------- | ------------------------------------------------------------------ |
 | `GET /api/health`             | `GET /`                                     | Unwraps the `API` envelope, times the round trip                   |
 | `POST /api/convert`           | `POST /excel/generate?excel_filename=…`     | Multipart in, 40 MB cap, filename sanitised, `download_url` rewritten |
-| `POST /api/query`             | `POST /query?query=…`                       | JSON body → query param; normalises the bare-string "no match" case |
+| `POST /api/query`             | `POST /query?query=…&source=…`              | JSON body → query params; normalises the bare-string "no match" case |
+| `GET /api/documents`          | `GET /query/documents`                      | Drops entries without a filename, since those cannot be a scope     |
+| `POST /api/reindex`           | `POST /query/reindex`                       | Rebuilds the FAISS store from `md_files/`                            |
 | `GET /api/download/{name}`    | `GET /excel/download/{name}`                | Streams the workbook with the right MIME type and filename          |
 
 Two consequences worth knowing: the backend needs no changes at all, and its
@@ -59,10 +61,10 @@ address never reaches the client bundle.
 
 ### Two rough edges this app works around
 
-`RAG/search.py` returns the plain string `"No Relavant Document Found!"` when
-retrieval finds no context, instead of the `RAGResponse` model it returns
-otherwise. `/api/query` detects that and produces a structured response, so the
-chat only ever deals with one shape.
+`/api/query` still normalises a bare-string response into the structured shape.
+The current `RAG/search.py` always returns the model, but an older backend
+returned `"No Relavant Document Found!"` on an empty retrieval, and the chat
+should only ever deal with one shape.
 
 `ExcelService` raises `ValueError` when the extractor found no text, which
 FastAPI reports as a 422. For this product that nearly always means an
