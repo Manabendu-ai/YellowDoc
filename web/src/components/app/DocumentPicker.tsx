@@ -3,10 +3,8 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { ChevronDownIcon, RefreshIcon } from "@/components/ui/Icons";
 import { RequestFailed, listDocuments } from "@/lib/api";
+import { ALL_DOCUMENTS } from "@/lib/scope";
 import type { IndexedDocument } from "@/lib/types";
-
-/** `""` means "search everything"; anything else is a filename in md_files/. */
-export const ALL_DOCUMENTS = "";
 
 type Props = {
   value: string;
