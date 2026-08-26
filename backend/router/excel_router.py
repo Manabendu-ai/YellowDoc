@@ -24,10 +24,15 @@ async def excel_generator(file : UploadFile, excel_filename: str):
             detail="Could not save the uploaded file on the server."
         )
 
+    service = ExcelService(file_path, excel_filename)
     try:
-        excel_file_path = await ExcelService(file_path, excel_filename).convert()
+        excel_file_path = await service.convert()
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e))
+    except RuntimeError as e:
+        # Missing credentials and similar configuration faults — not the user's
+        # document's fault, and retrying the upload will not help.
+        raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         raise HTTPException(
             status_code=502,
@@ -36,9 +41,13 @@ async def excel_generator(file : UploadFile, excel_filename: str):
 
     return {
        "status" : "Excel File Generated Successfully",
-       "file" : excel_filename, 
+       "file" : excel_filename,
        "saved_at" : excel_file_path,
-       "download_url": f"/excel/download/{excel_filename}"
+       "download_url": f"/excel/download/{excel_filename}",
+       # The name this document answers to in /query — lets the client select it
+       # in the Ask screen straight after converting.
+       "source": os.path.basename(service.md_path) if service.md_path else None,
+       "indexed": service.indexed,
     }
 
 
