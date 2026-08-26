@@ -9,12 +9,19 @@ import { Notice } from "@/components/ui/Notice";
 import { useConversions } from "@/hooks/useConversions";
 import { RequestFailed, convertDocument, downloadUrlFor } from "@/lib/api";
 import { makeId, safeWorkbookName, stripExtension } from "@/lib/format";
+import { rememberScope } from "@/lib/scope";
 import type { ConversionRecord } from "@/lib/types";
 
 type Run =
   | { state: "idle" }
   | { state: "running"; startedAt: number }
-  | { state: "done"; startedAt: number; record: ConversionRecord }
+  | {
+      state: "done";
+      startedAt: number;
+      record: ConversionRecord;
+      /** Filename the document answers to in Ask, or null if it was not indexed. */
+      indexedAs: string | null;
+    }
   | { state: "failed"; startedAt: number; title: string; detail?: string };
 
 export default function ConvertPage() {
@@ -51,7 +58,7 @@ export default function ConvertPage() {
       setRun({ state: "running", startedAt });
 
       try {
-        await convertDocument(file, finalName, controller.signal);
+        const result = await convertDocument(file, finalName, controller.signal);
         const record: ConversionRecord = {
           id: makeId(),
           name: finalName,
@@ -61,7 +68,10 @@ export default function ConvertPage() {
           at: Date.now(),
         };
         add(record);
-        setRun({ state: "done", startedAt, record });
+        /* So the first question after a conversion is already pointed at what
+           was just converted, rather than at the whole index. */
+        rememberScope(result.source);
+        setRun({ state: "done", startedAt, record, indexedAs: result.source });
       } catch (error) {
         if (controller.signal.aborted) {
           setRun({ state: "idle" });
@@ -245,9 +255,17 @@ export default function ConvertPage() {
             </div>
 
             <p className="t-data mt-5 border-t border-rule pt-4 text-fg-3">
-              Retrieval reads from the extracted Markdown, and the FAISS store is built once and
-              then cached. If a brand-new document does not turn up in Ask, rebuild the index —
-              Settings explains how.
+              {run.indexedAs ? (
+                <>
+                  Indexed for search as <span className="text-fg">{run.indexedAs}</span>. Ask is
+                  already scoped to it, so answers cannot be drawn from your other documents.
+                </>
+              ) : (
+                <>
+                  The workbook is written, but this document was not added to the search index. Your
+                  next question rebuilds the index and picks it up — or rebuild it now from Settings.
+                </>
+              )}
             </p>
           </div>
         </div>

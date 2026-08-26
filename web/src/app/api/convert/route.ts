@@ -79,13 +79,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ error, detail }, { status: res.status });
     }
 
-    const body = (await res.json()) as ConvertResult;
+    const body = (await res.json()) as Partial<ConvertResult>;
 
     return NextResponse.json({
       status: body.status ?? "Excel File Generated Successfully",
       file: body.file ?? name,
       saved_at: body.saved_at ?? "",
       download_url: `/api/download/${encodeURIComponent(name)}`,
+      /* The markdown filename this document now answers to in /query, so the Ask
+         screen can scope the first question to what was just converted. */
+      source: typeof body.source === "string" && body.source ? body.source : null,
+      indexed: body.indexed === true,
     } satisfies ConvertResult);
   } catch (err) {
     return NextResponse.json({ error: describeFetchFailure(err) }, { status: 502 });

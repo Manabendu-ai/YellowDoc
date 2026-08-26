@@ -546,6 +546,25 @@
     margin-bottom: 0.5rem;
   }
 
+  /* A native <select> wearing .input. The platform caret is removed and one of
+     our own is drawn over it, so padding-right has to leave room for it. The
+     wrapper needs `position: relative` for that caret to land. */
+  .select {
+    appearance: none;
+    padding-right: 2.25rem;
+    cursor: pointer;
+    text-overflow: ellipsis;
+  }
+
+  .select-caret {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    color: var(--yd-fg-3);
+    pointer-events: none;
+  }
+
   /* A link that draws its underline on hover rather than wearing one. */
   .link {
     color: var(--yd-fg);

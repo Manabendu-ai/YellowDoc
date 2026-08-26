@@ -1,9 +1,9 @@
 from langchain_groq import ChatGroq
-from langchain.messages import SystemMessage
 from langchain.agents import create_agent
 from langchain.agents.structured_output import ToolStrategy
 from groq import BadRequestError
 import os
+import threading
 import time
 from .json_response import JsonFormatResponse
 from .system_message import message
@@ -12,24 +12,52 @@ import json
 
 load_dotenv()
 
-os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+# os.environ[...] = None raises TypeError, so a missing key used to crash the
+# server at import time rather than reporting itself as a configuration problem.
+_groq_key = os.getenv("GROQ_API_KEY")
+if _groq_key:
+    os.environ["GROQ_API_KEY"] = _groq_key
+
+
+_agent = None
+_agent_lock = threading.Lock()
+
+
+def get_agent():
+    """The one structuring agent for this process.
+
+    Built per request before, which meant a new ChatGroq client and a new agent
+    graph on every upload. Cheaper than the Docling converter, but it is the same
+    mistake and it compounds the same way.
+    """
+    global _agent
+    if _agent is not None:
+        return _agent
+    with _agent_lock:
+        if _agent is None:
+            if not os.getenv("GROQ_API_KEY"):
+                raise RuntimeError(
+                    "GROQ_API_KEY is not set; the structuring step cannot run."
+                )
+            model = ChatGroq(model="openai/gpt-oss-120b", temperature=0)
+            _agent = create_agent(
+                model=model,
+                tools=[],
+                system_prompt=message,
+                response_format=ToolStrategy(JsonFormatResponse),
+            )
+            print("[INFO] LLM agent built (first use)")
+        return _agent
+
 
 class ModelEngine:
 
     def __init__(self):
-        self.model = ChatGroq(
-            model = "openai/gpt-oss-120b",
-            temperature = 0
-        )
+        self.response = None
 
-        self.agent = create_agent(
-            model=self.model,
-            tools=[],
-            system_prompt=message,
-            response_format=ToolStrategy(JsonFormatResponse)
-        )
-
-        print("[INFO] LLM Model loaded Successfully!")
+    @property
+    def agent(self):
+        return get_agent()
 
     def run(self, markdown : str)->JsonFormatResponse:
         """Invoke the agent, retrying transient Groq JSON-validation failures.

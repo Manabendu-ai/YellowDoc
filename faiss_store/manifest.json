@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "model": "all-MiniLM-L6-v2",
+    "chunk_size": 1200,
+    "chunk_overlap": 200,
+    "metric": "cosine",
+    "version": 2
+  },
+  "documents": {
+    "1000073988.md": {
+      "document": "1000073988",
+      "mtime": 1785831184,
+      "size": 2527,
+      "chunks": 4,
+      "indexed_at": 1787757972
+    },
+    "document:1000074962.md": {
+      "document": "document:1000074962",
+      "mtime": 1787682717,
+      "size": 1175,
+      "chunks": 1,
+      "indexed_at": 1787757972
+    },
+    "sample2.md": {
+      "document": "sample2",
+      "mtime": 1787753318,
+      "size": 1175,
+      "chunks": 1,
+      "indexed_at": 1787757972
+    },
+    "sample3.md": {
+      "document": "sample3",
+      "mtime": 1787753531,
+      "size": 1435,
+      "chunks": 3,
+      "indexed_at": 1787757972
+    },
+    "sample4.md": {
+      "document": "sample4",
+      "mtime": 1787753737,
+      "size": 1353,
+      "chunks": 2,
+      "indexed_at": 1787757972
+    },
+    "sem2result.md": {
+      "document": "sem2result",
+      "mtime": 1787062329,
+      "size": 2591,
+      "chunks": 4,
+      "indexed_at": 1787757972
+    }
+  }
+}

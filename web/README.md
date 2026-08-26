@@ -51,7 +51,9 @@ endpoint into something the browser can use:
 | ----------------------------- | ------------------------------------------- | ------------------------------------------------------------------ |
 | `GET /api/health`             | `GET /`                                     | Unwraps the `API` envelope, times the round trip                   |
 | `POST /api/convert`           | `POST /excel/generate?excel_filename=…`     | Multipart in, 40 MB cap, filename sanitised, `download_url` rewritten |
-| `POST /api/query`             | `POST /query?query=…`                       | JSON body → query param; normalises the bare-string "no match" case |
+| `POST /api/query`             | `POST /query?query=…&source=…`              | JSON body → query params; normalises the bare-string "no match" case |
+| `GET /api/documents`          | `GET /query/documents`                      | Drops entries without a filename, since those cannot be a scope     |
+| `POST /api/reindex`           | `POST /query/reindex`                       | Rebuilds the FAISS store from `md_files/`                            |
 | `GET /api/download/{name}`    | `GET /excel/download/{name}`                | Streams the workbook with the right MIME type and filename          |
 
 Two consequences worth knowing: the backend needs no changes at all, and its
@@ -59,10 +61,10 @@ address never reaches the client bundle.
 
 ### Two rough edges this app works around
 
-`RAG/search.py` returns the plain string `"No Relavant Document Found!"` when
-retrieval finds no context, instead of the `RAGResponse` model it returns
-otherwise. `/api/query` detects that and produces a structured response, so the
-chat only ever deals with one shape.
+`/api/query` still normalises a bare-string response into the structured shape.
+The current `RAG/search.py` always returns the model, but an older backend
+returned `"No Relavant Document Found!"` on an empty retrieval, and the chat
+should only ever deal with one shape.
 
 `ExcelService` raises `ValueError` when the extractor found no text, which
 FastAPI reports as a 422. For this product that nearly always means an
@@ -76,16 +78,16 @@ src/
     page.tsx              marketing page
     app/                  the application
       convert/            upload → pipeline progress → download
-      chat/               questions against the FAISS index
+      chat/               questions against the FAISS index, scoped per document
       history/            workbooks made from this browser
-      settings/           backend address, health check, theme
-    api/                  the four proxy route handlers
+      settings/           backend address, health check, theme, index rebuild
+    api/                  the six proxy route handlers
     globals.css           the entire design system
     not-found.tsx         404
   components/
     brand/ landing/ app/ ui/ theme/
   hooks/                  useReveal, useStoredState, useConversions
-  lib/                    api client, types, formatting, server config
+  lib/                    api client, types, formatting, scope, server config
 ```
 
 Each screen under `app/app/` has a two-line `layout.tsx` whose only job is to
@@ -150,6 +152,23 @@ server, so a cleared list does not delete anything. The chat thread is stored
 the same way and capped at the last 80 turns, since answers carry their quoted
 excerpts and the quota is finite.
 
-The FAISS store is built once, from everything in `md_files/`, the first time a
-question is asked, then cached on disk. Documents converted afterwards are not
-searchable until `faiss_store/` is deleted. Settings explains this on screen.
+## Scoping a question to one document
+
+Retrieval over a handful of near-identical invoices reliably answers from the
+wrong one: the chunks are so similar that the document you meant may not make
+the global top-k at all, and naming the file in the question does not help —
+the model can only work with the passages it was handed.
+
+So the Ask screen has a document picker, backed by `GET /api/documents`. Picking
+a file sends it as `source`, and the backend filters retrieval to that file
+before the model sees anything. Every answer also carries the passages that
+produced it, each labelled with its filename and similarity score, so an answer
+drawn from the wrong document is visible rather than plausible. Convert
+pre-selects whatever it just produced, via `src/lib/scope.ts`.
+
+The FAISS store keeps a manifest of exactly which files it indexed, at which
+size and mtime, with which model and chunk settings. Each conversion indexes its
+own Markdown immediately; if the manifest ever stops matching `md_files/`, the
+next question resynchronises or rebuilds. Deleting `faiss_store/` by hand is no
+longer necessary — Settings has a rebuild button for the cases that cannot
+self-heal, such as a corrupt store or a chunk size changed by hand.

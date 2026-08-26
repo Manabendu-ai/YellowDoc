@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnswerDetail } from "@/components/app/AnswerDetail";
+import { DocumentPicker } from "@/components/app/DocumentPicker";
 import { ChatIcon, SendIcon } from "@/components/ui/Icons";
 import { EmptyState } from "@/components/ui/Notice";
 import { useStoredState } from "@/hooks/useStoredState";
 import { RequestFailed, askQuestion } from "@/lib/api";
 import { formatWhen, makeId } from "@/lib/format";
+import { ALL_DOCUMENTS, SCOPE_KEY } from "@/lib/scope";
 import type { ChatMessage } from "@/lib/types";
 
 const OPENERS = [
@@ -26,11 +28,18 @@ const tail = (messages: ChatMessage[]) =>
 
 export default function ChatPage() {
   const [messages, setMessages, loaded] = useStoredState<ChatMessage[]>("yellowdoc.thread", []);
+  /* Persisted alongside the thread: a scope you chose deliberately should not
+     quietly reset to "everything" on the next reload. */
+  const [scope, setScope] = useStoredState<string>(SCOPE_KEY, ALL_DOCUMENTS);
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abort = useRef<AbortController | null>(null);
+  /* Read inside `send` so changing the scope does not rebuild the callback and
+     re-render every message bubble. */
+  const scopeRef = useRef(scope);
+  scopeRef.current = scope;
 
   useEffect(() => () => abort.current?.abort(), []);
 
@@ -53,7 +62,7 @@ export default function ChatPage() {
       abort.current = controller;
 
       try {
-        const response = await askQuestion(query, controller.signal);
+        const response = await askQuestion(query, scopeRef.current, controller.signal);
         setMessages((current) =>
           tail([
             ...current,
@@ -67,6 +76,8 @@ export default function ChatPage() {
                 confidence: response.confidence ?? "",
                 key_points: response.key_points ?? [],
                 examples: response.examples ?? [],
+                scope: response.scope ?? null,
+                sources: response.sources ?? [],
               },
               at: Date.now(),
             },
@@ -116,6 +127,8 @@ export default function ChatPage() {
           </button>
         ) : null}
       </header>
+
+      <DocumentPicker value={scope} onChange={setScope} disabled={pending} />
 
       <div className="flex flex-1 flex-col gap-4">
         {loaded && messages.length === 0 && !pending ? (
@@ -173,7 +186,9 @@ export default function ChatPage() {
               <span />
             </span>
             <span className="t-data text-fg-3">
-              Retrieving three chunks, then answering from them only
+              {scope
+                ? `Retrieving passages from ${scope}, then answering from those only`
+                : "Retrieving the closest passages, then answering from those only"}
             </span>
           </div>
         ) : null}

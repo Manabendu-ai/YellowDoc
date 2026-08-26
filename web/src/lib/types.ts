@@ -2,11 +2,28 @@
  * Shapes returned by the FastAPI backend.
  *
  * These mirror the Python models exactly — keep them in sync:
- *   RagResponse   -> RAG/structured_response.py  (RAGResponse)
- *   ConvertResult -> backend/router/excel_router.py (excel_generator)
+ *   RagResponse      -> RAG/structured_response.py  (RAGAnswer)
+ *   RagSource        -> RAG/structured_response.py  (RetrievedChunk)
+ *   IndexedDocument  -> RAG/vector_store.py         (FaissVectorStore.documents)
+ *   ConvertResult    -> backend/router/excel_router.py (excel_generator)
  */
 
-/** `POST /query?query=…` — RAG/structured_response.py::RAGResponse */
+/**
+ * One passage retrieval actually used, attached server-side rather than asked of
+ * the model — the only way a citation can be trusted.
+ */
+export type RagSource = {
+  /** Human-facing name, e.g. `sample3`. */
+  document: string;
+  /** Filename inside md_files/, e.g. `sample3.md`. This is the picker's value. */
+  source: string;
+  chunk: number;
+  /** Cosine similarity: higher is closer. */
+  score: number;
+  excerpt: string;
+};
+
+/** `POST /query?query=…&source=…` — RAG/structured_response.py::RAGAnswer */
 export type RagResponse = {
   query: string;
   answer: string;
@@ -14,6 +31,25 @@ export type RagResponse = {
   confidence: string;
   key_points: string[];
   examples: string[];
+  /** The file the question was restricted to, or null for the whole index. */
+  scope: string | null;
+  sources: RagSource[];
+};
+
+/** `GET /query/documents` — one entry per file the index can currently see. */
+export type IndexedDocument = {
+  source: string;
+  document: string;
+  chunks: number;
+  /** Unix seconds, or null on indexes written before tracking existed. */
+  indexed_at: number | null;
+};
+
+/** `POST /query/reindex` */
+export type ReindexResult = {
+  mode: string;
+  chunks: number;
+  documents: number;
 };
 
 /** `POST /excel/generate?excel_filename=…` */
@@ -22,6 +58,13 @@ export type ConvertResult = {
   file: string;
   saved_at: string;
   download_url: string;
+  /**
+   * The name this document answers to in /query — present so the Ask screen can
+   * preselect what was just converted. Null if markdown was never written.
+   */
+  source: string | null;
+  /** False when indexing failed; the next question rescans and picks it up. */
+  indexed: boolean;
 };
 
 /** `GET /` */

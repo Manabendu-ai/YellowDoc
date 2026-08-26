@@ -197,6 +197,25 @@ export function BrainIcon({ size = 18, className }: IconProps) {
   );
 }
 
+/** Caret for native <select> controls, which we style ourselves. */
+export function ChevronDownIcon({ size = 18, className }: IconProps) {
+  return (
+    <svg {...frame(size)} className={className}>
+      <path d="m6 9.5 6 6 6-6" />
+    </svg>
+  );
+}
+
+/** Rebuild / re-run. Used by the search-index control in Settings. */
+export function RefreshIcon({ size = 18, className }: IconProps) {
+  return (
+    <svg {...frame(size)} className={className}>
+      <path d="M20 12a8 8 0 1 1-2.5-5.8" />
+      <path d="M20 4v3.4h-3.4" />
+    </svg>
+  );
+}
+
 export function GithubIcon({ size = 18, className }: IconProps) {
   return (
     <svg {...frame(size)} className={className}>
