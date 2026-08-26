@@ -5,7 +5,12 @@
  */
 
 import { isApiError } from "@/lib/types";
-import type { ConvertResult, RagResponse } from "@/lib/types";
+import type {
+  ConvertResult,
+  IndexedDocument,
+  RagResponse,
+  ReindexResult,
+} from "@/lib/types";
 
 /** Thrown for anything the interface should show the person. */
 export class RequestFailed extends Error {
