@@ -58,7 +58,7 @@ export default function ConvertPage() {
       setRun({ state: "running", startedAt });
 
       try {
-        await convertDocument(file, finalName, controller.signal);
+        const result = await convertDocument(file, finalName, controller.signal);
         const record: ConversionRecord = {
           id: makeId(),
           name: finalName,
@@ -68,7 +68,10 @@ export default function ConvertPage() {
           at: Date.now(),
         };
         add(record);
-        setRun({ state: "done", startedAt, record });
+        /* So the first question after a conversion is already pointed at what
+           was just converted, rather than at the whole index. */
+        rememberScope(result.source);
+        setRun({ state: "done", startedAt, record, indexedAs: result.source });
       } catch (error) {
         if (controller.signal.aborted) {
           setRun({ state: "idle" });
