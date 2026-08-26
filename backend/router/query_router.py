@@ -44,7 +44,7 @@ async def rag_search(query: str, source: Optional[str] = None, top_k: int = 5):
 
 @router.get("/documents")
 async def list_documents():
-    """Everything currently searchable, newest first."""
+    """Everything currently searchable, sorted by name for a stable picker."""
     try:
         documents = await to_thread.run_sync(RagService.documents)
     except RuntimeError as e:
