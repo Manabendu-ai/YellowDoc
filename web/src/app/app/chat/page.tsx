@@ -30,7 +30,7 @@ export default function ChatPage() {
   const [messages, setMessages, loaded] = useStoredState<ChatMessage[]>("yellowdoc.thread", []);
   /* Persisted alongside the thread: a scope you chose deliberately should not
      quietly reset to "everything" on the next reload. */
-  const [scope, setScope] = useStoredState<string>("yellowdoc.scope", ALL_DOCUMENTS);
+  const [scope, setScope] = useStoredState<string>(SCOPE_KEY, ALL_DOCUMENTS);
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);

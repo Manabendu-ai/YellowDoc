@@ -9,12 +9,19 @@ import { Notice } from "@/components/ui/Notice";
 import { useConversions } from "@/hooks/useConversions";
 import { RequestFailed, convertDocument, downloadUrlFor } from "@/lib/api";
 import { makeId, safeWorkbookName, stripExtension } from "@/lib/format";
+import { rememberScope } from "@/lib/scope";
 import type { ConversionRecord } from "@/lib/types";
 
 type Run =
   | { state: "idle" }
   | { state: "running"; startedAt: number }
-  | { state: "done"; startedAt: number; record: ConversionRecord }
+  | {
+      state: "done";
+      startedAt: number;
+      record: ConversionRecord;
+      /** Filename the document answers to in Ask, or null if it was not indexed. */
+      indexedAs: string | null;
+    }
   | { state: "failed"; startedAt: number; title: string; detail?: string };
 
 export default function ConvertPage() {
