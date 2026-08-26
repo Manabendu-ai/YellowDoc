@@ -255,9 +255,17 @@ export default function ConvertPage() {
             </div>
 
             <p className="t-data mt-5 border-t border-rule pt-4 text-fg-3">
-              Retrieval reads from the extracted Markdown, and the FAISS store is built once and
-              then cached. If a brand-new document does not turn up in Ask, rebuild the index —
-              Settings explains how.
+              {run.indexedAs ? (
+                <>
+                  Indexed for search as <span className="text-fg">{run.indexedAs}</span>. Ask is
+                  already scoped to it, so answers cannot be drawn from your other documents.
+                </>
+              ) : (
+                <>
+                  The workbook is written, but this document was not added to the search index. Your
+                  next question rebuilds the index and picks it up — or rebuild it now from Settings.
+                </>
+              )}
             </p>
           </div>
         </div>
