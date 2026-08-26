@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnswerDetail } from "@/components/app/AnswerDetail";
-import { ALL_DOCUMENTS, DocumentPicker } from "@/components/app/DocumentPicker";
+import { DocumentPicker } from "@/components/app/DocumentPicker";
 import { ChatIcon, SendIcon } from "@/components/ui/Icons";
 import { EmptyState } from "@/components/ui/Notice";
 import { useStoredState } from "@/hooks/useStoredState";
 import { RequestFailed, askQuestion } from "@/lib/api";
 import { formatWhen, makeId } from "@/lib/format";
+import { ALL_DOCUMENTS, SCOPE_KEY } from "@/lib/scope";
 import type { ChatMessage } from "@/lib/types";
 
 const OPENERS = [
