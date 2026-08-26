@@ -185,7 +185,9 @@ export default function ChatPage() {
               <span />
             </span>
             <span className="t-data text-fg-3">
-              Retrieving three chunks, then answering from them only
+              {scope
+                ? `Retrieving passages from ${scope}, then answering from those only`
+                : "Retrieving the closest passages, then answering from those only"}
             </span>
           </div>
         ) : null}
